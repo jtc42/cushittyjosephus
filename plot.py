@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 max_plyrs=128
 
 n_plyr_set = range(2,max_plyrs+1)
-files=[str(n)+"_plyrs.npy" for n in n_plyr_set]
+files=['data/'+str(n)+"_plyrs.npy" for n in n_plyr_set]
 
 step_size = 0.025
 

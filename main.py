@@ -74,5 +74,5 @@ for n_plyrs in range(2,129):
         data.append(weights)
     
     #Save data
-    filename=str(n_plyrs)+'_plyrs'
+    filename='data/'+str(n_plyrs)+'_plyrs'
     np.save(filename+'.npy', data)    
