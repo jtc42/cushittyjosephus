@@ -7,20 +7,20 @@ Created on Thu Feb 09 16:39:08 2017
 import numpy as np
 import matplotlib.pyplot as plt
 
-max_plyrs=128
+max_plyrs = 128
 
-n_plyr_set = range(2,max_plyrs+1)
-files=['data/'+str(n)+"_plyrs.npy" for n in n_plyr_set]
+n_plyr_set = range(2, max_plyrs+1)
+files = ['data/'+str(n)+"_plyrs.npy" for n in n_plyr_set]
 
 step_size = 0.025
 
-probs = np.arange(0,1.0+step_size,step_size) #One more than is used. Colormap fix.
+probs = np.arange(0, 1.0+step_size, step_size)  # One more than is used. Colormap fix.
        
 for f in files:
     data = np.load(f)
-    plyrs = range(0,len(data[0])+1) #List of players in the game. One more than is used. Colormap fix.
+    plyrs = range(0, len(data[0])+1)  # List of players in the game. One more than is used. Colormap fix.
     
-    #Plot data
+    # Plot data
     plt.figure()
     plt.pcolormesh(plyrs, probs, data, cmap='gnuplot')
     plt.title(f)
@@ -35,4 +35,3 @@ for f in files:
     plt.savefig(f[:-4]+'.png', dpi=300)
     
     plt.close()
-    

@@ -33,7 +33,7 @@ end = drv.Event()
 # SourceModele SECTION
 # We write the C code and the indexing and we have lots of control
 
-mod = SourceModule(open("kernel.c", "r").read(), no_extern_c=True)
+mod = SourceModule(open("kernel.cu", "r").read(), no_extern_c=True)
 #mod = SourceModule(open("kernal_test.c", "r").read(), no_extern_c=True)
 
 gpujob = mod.get_function("gpuMain")

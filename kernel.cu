@@ -13,7 +13,7 @@ extern "C" {
 		curandState state;
 		curand_init((unsigned long long)clock() + id, 0, 0, &state);
 
-		int plyrs[128] = { 0 }; /*Creates an array to store player status. 
+		int plyrs[{{ MAX_PLYRS }}] = { 0 }; /*Creates an array to store player status.
 								 Number of players cannot exceed this length.
 								 All future references to the number of players 
 								 will rely on n_players, NOT the array length.*/
