@@ -39,7 +39,7 @@ def run_function(n_players, probability, blocks=1024, block_size=1024):
 
     # GPU settings
     nbr_values = blocks*block_size
-    print "Using nbr_values =", nbr_values
+    print("Using nbr_values =", nbr_values)
     
     # Destination array that will receive the result
     wnrs = np.ones(nbr_values).astype(np.int32)
@@ -50,7 +50,7 @@ def run_function(n_players, probability, blocks=1024, block_size=1024):
     # Calculate the run length
     end.synchronize()
     secs = start.time_till(end)*1e-3
-    print "SourceModule time: " + str(secs)
+    print("SourceModule time: " + str(secs))
     return wnrs
 
 
@@ -66,7 +66,7 @@ for n_plyrs in range(2, MAX_PLYRS+1):
         blocksize = 1024
         n_games = n_blocks*blocksize
         
-        print "Calculating for success probability "+str(prob)
+        print("Calculating for success probability "+str(prob))
         
         winners = list(run_function(n_plyrs, prob, blocks=n_blocks, block_size=blocksize))
         histogram = collections.Counter(winners)
