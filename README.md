@@ -1,4 +1,4 @@
-# CuShittyJosephus
+# PyCUDA Shitty Josephus
 PyCUDA optimized Monte Carlo solver for the stochastic Josephus problem ("shitty Josephus").
 
 ## Requirements
